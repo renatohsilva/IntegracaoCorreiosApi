@@ -1,0 +1,7 @@
+C:\Repositorios\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.Domain\bin\Debug\netcoreapp3.1\IntegracaoCorreiosApi.Domain.deps.json
+C:\Repositorios\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.Domain\bin\Debug\netcoreapp3.1\IntegracaoCorreiosApi.Domain.dll
+C:\Repositorios\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.Domain\obj\Debug\netcoreapp3.1\IntegracaoCorreiosApi.Domain.AssemblyInfoInputs.cache
+C:\Repositorios\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.Domain\obj\Debug\netcoreapp3.1\IntegracaoCorreiosApi.Domain.AssemblyInfo.cs
+C:\Repositorios\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.Domain\bin\Debug\netcoreapp3.1\IntegracaoCorreiosApi.Domain.pdb
+C:\Repositorios\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.Domain\obj\Debug\netcoreapp3.1\IntegracaoCorreiosApi.Domain.dll
+C:\Repositorios\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.Domain\obj\Debug\netcoreapp3.1\IntegracaoCorreiosApi.Domain.pdb
