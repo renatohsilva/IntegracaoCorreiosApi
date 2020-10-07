@@ -27,7 +27,9 @@ export class FetchEndereco extends Component {
                     <input type="text" className="form-control" value={this.state.cep} onChange={this.cepMudou} />
                 </div>
                 <button className="btn btn-primary" onClick={this.buscarEndereco}>Buscar Endereços</button>
-                <Endereco endereco={this.state.endereco} />
+                <div>
+                    <Endereco endereco={this.state.endereco} />
+                </div>
             </div>
         );
     }

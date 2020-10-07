@@ -1,32 +1,31 @@
 ﻿import React, { Component } from 'react';
+import { Table } from 'reactstrap';
 
 export class Endereco extends Component {
 
     montarendereco(endereco) {
         if (endereco) {
             return (
-                <div>
-                    <label>Endereço</label>
-                    <div className="input-group mb-3">
-                        <input type="text" className="form-control" value={endereco.endereco} readOnly={true} />
-                    </div>
-                    <label>Complemento</label>
-                    <div className="input-group mb-3">
-                        <input type="text" className="form-control" value={endereco.complemento2} readOnly={true} />
-                    </div>
-                    <label>Bairro</label>
-                    <div className="input-group mb-3">
-                        <input type="text" className="form-control" value={endereco.bairro} readOnly={true} />
-                    </div>
-                    <label>Cidade</label>
-                    <div className="input-group mb-3">
-                        <input type="text" className="form-control" value={endereco.cidade} readOnly={true} />
-                    </div>
-                    <label>UF</label>
-                    <div className="input-group mb-3">
-                        <input type="text" className="form-control" value={endereco.uf} readOnly={true} />
-                    </div>
-                </div>
+                <Table>
+                    <thead>
+                        <tr>
+                            <th>Endereço</th>
+                            <th>Complemento</th>
+                            <th>Bairro</th>
+                            <th>Cidade</th>
+                            <th>UF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{endereco.logradouro}</td>
+                            <td>{endereco.complemento}</td>
+                            <td>{endereco.bairro}</td>
+                            <td>{endereco.localidade}</td>
+                            <td>{endereco.uf}</td>
+                        </tr>
+                    </tbody>
+                </Table>
             );
         }
         return (<div></div>);   

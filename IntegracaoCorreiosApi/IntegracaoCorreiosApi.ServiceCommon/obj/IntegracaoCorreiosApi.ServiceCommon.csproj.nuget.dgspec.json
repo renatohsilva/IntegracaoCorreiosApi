@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\IntegracaoCorreiosApi.ServiceCommon.csproj": {}
+    "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\IntegracaoCorreiosApi.ServiceCommon.csproj": {}
   },
   "projects": {
-    "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj": {
+    "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj",
+        "projectUniqueName": "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj",
         "projectName": "IntegracaoCorreiosApi.Domain",
-        "projectPath": "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj",
-        "packagesPath": "C:\\Users\\re_hs\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\obj\\",
+        "projectPath": "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\re_hs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -44,19 +44,19 @@
           "dependencies": {
             "System.ServiceModel.Duplex": {
               "target": "Package",
-              "version": "[4.4.*, )"
+              "version": "[4.7.0, )"
             },
             "System.ServiceModel.Http": {
               "target": "Package",
-              "version": "[4.4.*, )"
+              "version": "[4.7.0, )"
             },
             "System.ServiceModel.NetTcp": {
               "target": "Package",
-              "version": "[4.4.*, )"
+              "version": "[4.7.0, )"
             },
             "System.ServiceModel.Security": {
               "target": "Package",
-              "version": "[4.4.*, )"
+              "version": "[4.7.0, )"
             }
           },
           "imports": [
@@ -74,24 +74,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\IntegracaoCorreiosApi.ServiceCommon.csproj": {
+    "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\IntegracaoCorreiosApi.ServiceCommon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\IntegracaoCorreiosApi.ServiceCommon.csproj",
+        "projectUniqueName": "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\IntegracaoCorreiosApi.ServiceCommon.csproj",
         "projectName": "IntegracaoCorreiosApi.ServiceCommon",
-        "projectPath": "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\IntegracaoCorreiosApi.ServiceCommon.csproj",
-        "packagesPath": "C:\\Users\\re_hs\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\obj\\",
+        "projectPath": "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\IntegracaoCorreiosApi.ServiceCommon.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.ServiceCommon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\re_hs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -105,8 +105,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj": {
-                "projectPath": "C:\\Repositorios\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj"
+              "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj": {
+                "projectPath": "D:\\Repositorio\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi\\IntegracaoCorreiosApi.Domain\\IntegracaoCorreiosApi.Domain.csproj"
               }
             }
           }
@@ -120,21 +120,25 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Refit": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "System.ServiceModel.Duplex": {
               "target": "Package",
-              "version": "[4.4.*, )"
+              "version": "[4.7.0, )"
             },
             "System.ServiceModel.Http": {
               "target": "Package",
-              "version": "[4.4.*, )"
+              "version": "[4.7.0, )"
             },
             "System.ServiceModel.NetTcp": {
               "target": "Package",
-              "version": "[4.4.*, )"
+              "version": "[4.7.0, )"
             },
             "System.ServiceModel.Security": {
               "target": "Package",
-              "version": "[4.4.*, )"
+              "version": "[4.7.0, )"
             }
           },
           "imports": [
@@ -152,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

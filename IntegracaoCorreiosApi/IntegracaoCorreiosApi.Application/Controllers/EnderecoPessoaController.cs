@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using System.Threading.Tasks;
 using IntegracaoCorreiosApi.Domain;
 using IntegracaoCorreiosApi.ServiceCommon.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -14,12 +10,10 @@ namespace IntegracaoCorreiosApi.Application.Controllers
     public class EnderecoPessoaController : ControllerBase
     {
         private readonly IEnderecoService enderecoService;
-        private readonly IMapper mapper;
 
-        public EnderecoPessoaController(IEnderecoService enderecoService, IMapper mapper)
+        public EnderecoPessoaController(IEnderecoService enderecoService)
         {
             this.enderecoService = enderecoService;
-            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -27,9 +21,7 @@ namespace IntegracaoCorreiosApi.Application.Controllers
         {
             try
             {
-                var consultaCEP = await enderecoService.BuscarEndereco(cep);
-                var endereco = mapper.Map<WSCorreios.enderecoERP, EnderecoPessoa>(consultaCEP.@return);
-                return endereco;
+                return await enderecoService.BuscarEndereco(cep);
             }
             catch 
             {

@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using IntegracaoCorreiosApi.Domain;
+using System.Threading.Tasks;
 
 namespace IntegracaoCorreiosApi.ServiceCommon.Interfaces
 {
     public interface IEnderecoService
     {
-        public Task<WSCorreios.consultaCEPResponse> BuscarEndereco(string cep);
+        public Task<EnderecoPessoa> BuscarEndereco(string cep);
     }
 }

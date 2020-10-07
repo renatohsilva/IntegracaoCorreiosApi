@@ -1,15 +1,11 @@
-using AutoMapper;
-using IntegracaoCorreiosApi.ApplicationCommon.Mapper;
 using IntegracaoCorreiosApi.ServiceCommon.Interfaces;
 using IntegracaoCorreiosApi.ServiceCommon.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Reflection;
 
 namespace IntegracaoCorreiosApi.Application
 {
@@ -28,8 +24,6 @@ namespace IntegracaoCorreiosApi.Application
             services.AddControllersWithViews();
 
             ConfigureBusinessServices(services);
-
-            services.AddAutoMapper(Assembly.Load(Assembly.GetAssembly(typeof(EnderecoMappingProfile)).FullName));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
