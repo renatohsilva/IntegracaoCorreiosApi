@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import { Row, Col } from 'reactstrap';
 import { Endereco } from './/Endereco';
 
 export class FetchEndereco extends Component {
@@ -23,13 +24,17 @@ export class FetchEndereco extends Component {
         return (
             <div>
                 <label>CEP</label>
-                <div className="input-group mb-3">
-                    <input type="text" className="form-control" value={this.state.cep} onChange={this.cepMudou} />
-                </div>
-                <button className="btn btn-primary" onClick={this.buscarEndereco}>Buscar Endereços</button>
-                <div>
-                    <Endereco endereco={this.state.endereco} />
-                </div>
+                <Row>
+                    <Col xs="4">
+                        <input type="text" className="form-control ml-3 ml-lg-0" value={this.state.cep} onChange={this.cepMudou} />
+                        <button className="btn btn-primary ml-5 ml-lg-0" onClick={this.buscarEndereco}>Buscar Endereços</button>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs="12">
+                        <Endereco endereco={this.state.endereco} />
+                    </Col>
+                </Row>
             </div>
         );
     }
