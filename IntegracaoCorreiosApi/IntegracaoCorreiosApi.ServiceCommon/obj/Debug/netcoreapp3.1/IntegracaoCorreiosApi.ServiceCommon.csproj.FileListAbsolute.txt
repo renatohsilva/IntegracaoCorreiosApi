@@ -20,5 +20,5 @@ D:\Repositorio\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi
 D:\Repositorio\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.ServiceCommon\bin\Debug\netcoreapp3.1\IntegracaoCorreiosApi.ServiceCommon.pdb
 D:\Repositorio\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.ServiceCommon\bin\Debug\netcoreapp3.1\IntegracaoCorreiosApi.Domain.pdb
 D:\Repositorio\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.ServiceCommon\obj\Debug\netcoreapp3.1\RefitStubs.g.cs
-D:\Repositorio\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.ServiceCommon\obj\Debug\netcoreapp3.1\IntegracaoCorreiosApi.ServiceCommon.csproj.CoreCompileInputs.cache
 D:\Repositorio\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.ServiceCommon\obj\Debug\netcoreapp3.1\IntegracaoCorreiosApi.ServiceCommon.pdb
+D:\Repositorio\IntegracaoCorreiosApi\IntegracaoCorreiosApi\IntegracaoCorreiosApi.ServiceCommon\obj\Debug\netcoreapp3.1\IntegracaoCorreiosApi.ServiceCommon.csproj.CoreCompileInputs.cache

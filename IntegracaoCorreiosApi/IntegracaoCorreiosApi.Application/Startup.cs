@@ -1,3 +1,4 @@
+using Flurl.Http.Configuration;
 using IntegracaoCorreiosApi.ServiceCommon.Interfaces;
 using IntegracaoCorreiosApi.ServiceCommon.Services;
 using Microsoft.AspNetCore.Builder;
@@ -35,6 +36,7 @@ namespace IntegracaoCorreiosApi.Application
         public void ConfigureBusinessServices(IServiceCollection services)
         {
             services.AddScoped<IEnderecoService, EnderecoService>();
+            services.AddSingleton<IFlurlClientFactory, PerBaseUrlFlurlClientFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

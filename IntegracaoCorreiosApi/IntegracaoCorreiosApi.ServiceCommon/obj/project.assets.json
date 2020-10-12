@@ -2,38 +2,45 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Microsoft.NETCore.Platforms/2.0.0": {
+      "Flurl/2.8.2": {
         "type": "package",
         "compile": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard2.0/Flurl.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard2.0/Flurl.dll": {}
         }
       },
-      "Newtonsoft.Json/12.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Refit/5.2.1": {
+      "Flurl.Http/2.4.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3",
-          "System.Text.Json": "4.7.2"
+          "Flurl": "2.8.2",
+          "Newtonsoft.Json": "12.0.2",
+          "System.Text.Encoding.CodePages": "4.5.1"
         },
         "compile": {
-          "lib/netstandard2.1/Refit.dll": {}
+          "lib/netstandard2.0/Flurl.Http.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Refit.dll": {}
+          "lib/netstandard2.0/Flurl.Http.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
         },
-        "build": {
-          "buildTransitive/netstandard2.0/refit.targets": {}
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "System.Private.ServiceModel/4.7.0": {
@@ -57,6 +64,15 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/System.Reflection.DispatchProxy.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.Security.AccessControl/4.5.0": {
@@ -224,13 +240,23 @@
           "lib/netstandard2.0/System.ServiceModel.Security.dll": {}
         }
       },
-      "System.Text.Json/4.7.2": {
+      "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
         "compile": {
-          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "IntegracaoCorreiosApi.Domain/1.0.0": {
@@ -252,27 +278,67 @@
     }
   },
   "libraries": {
-    "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
+    "Flurl/2.8.2": {
+      "sha512": "3VEYAqkGTGHgla4xuyEB4d8XGLeMX2k05C4WfI7YmKQHsL7RhoGu3L6h1xsKKTPFWjEL13p09XOIGwD1pQ86dg==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/2.0.0",
+      "path": "flurl/2.8.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flurl.2.8.2.nupkg.sha512",
+        "flurl.nuspec",
+        "lib/net40/Flurl.dll",
+        "lib/net40/Flurl.xml",
+        "lib/netstandard1.0/Flurl.dll",
+        "lib/netstandard1.0/Flurl.xml",
+        "lib/netstandard1.3/Flurl.dll",
+        "lib/netstandard1.3/Flurl.xml",
+        "lib/netstandard2.0/Flurl.dll",
+        "lib/netstandard2.0/Flurl.xml"
+      ]
+    },
+    "Flurl.Http/2.4.2": {
+      "sha512": "VfSJ0DKzh6kf2IOZGG1/JpHajhtqzGp1t+M1QSyFGse7c4Gg1DpH80LTveYea2hV1BEtvPPEp6A4iZ78D8bxGQ==",
+      "type": "package",
+      "path": "flurl.http/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flurl.http.2.4.2.nupkg.sha512",
+        "flurl.http.nuspec",
+        "lib/net45/Flurl.Http.dll",
+        "lib/net45/Flurl.Http.xml",
+        "lib/net46/Flurl.Http.dll",
+        "lib/net46/Flurl.Http.xml",
+        "lib/netstandard1.1/Flurl.Http.dll",
+        "lib/netstandard1.1/Flurl.Http.xml",
+        "lib/netstandard1.3/Flurl.Http.dll",
+        "lib/netstandard1.3/Flurl.Http.xml",
+        "lib/netstandard2.0/Flurl.Http.dll",
+        "lib/netstandard2.0/Flurl.Http.xml"
+      ]
+    },
+    "Microsoft.NETCore.Platforms/2.1.2": {
+      "sha512": "mOJy3M0UN+LUG21dLGMxaWZEP6xYpQEpLuvuEQBaownaX4YuhH6NmNUlN9si+vNkAS6dwJ//N1O4DmLf2CikVg==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/2.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.2.1.2.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "Newtonsoft.Json/12.0.3": {
-      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.3",
+      "path": "newtonsoft.json/12.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -295,211 +361,8 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
-      ]
-    },
-    "Refit/5.2.1": {
-      "sha512": "dgLXewaEZi7kexzfaYb7JZPGw93UMNAr7dF9r/S7HuKMjQcWieGnXolmSD2XMA0eCn8t4PLjnm8OwwkG+cGrPw==",
-      "type": "package",
-      "path": "refit/5.2.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/MSBuildCore20/GeneratedInterfaceStubTemplate.mustache",
-        "build/MSBuildCore20/InterfaceStubGenerator.BuildTasks.deps.json",
-        "build/MSBuildCore20/InterfaceStubGenerator.BuildTasks.dll",
-        "build/MSBuildCore20/InterfaceStubGenerator.BuildTasks.pdb",
-        "build/MSBuildCore20/InterfaceStubGenerator.BuildTasks.xml",
-        "build/MSBuildCore20/InterfaceStubGenerator.Core.dll",
-        "build/MSBuildCore20/InterfaceStubGenerator.Core.pdb",
-        "build/MSBuildCore20/InterfaceStubGenerator.Core.xml",
-        "build/MSBuildCore20/Microsoft.CodeAnalysis.CSharp.dll",
-        "build/MSBuildCore20/Microsoft.CodeAnalysis.dll",
-        "build/MSBuildCore20/Nustache.Core.dll",
-        "build/MSBuildCore20/System.Runtime.CompilerServices.Unsafe.dll",
-        "build/MSBuildCore20/System.Text.Encoding.CodePages.dll",
-        "build/MSBuildCore20/cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/cs/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/de/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/de/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/es/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/es/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/fr/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/it/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/it/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/ja/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/ko/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/pl/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/pt-BR/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/ru/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
-        "build/MSBuildCore20/tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/tr/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildCore20/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildCore20/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/GeneratedInterfaceStubTemplate.mustache",
-        "build/MSBuildFull46/InterfaceStubGenerator.BuildTasks.dll",
-        "build/MSBuildFull46/InterfaceStubGenerator.BuildTasks.pdb",
-        "build/MSBuildFull46/InterfaceStubGenerator.BuildTasks.xml",
-        "build/MSBuildFull46/InterfaceStubGenerator.Core.dll",
-        "build/MSBuildFull46/InterfaceStubGenerator.Core.pdb",
-        "build/MSBuildFull46/InterfaceStubGenerator.Core.xml",
-        "build/MSBuildFull46/Microsoft.CodeAnalysis.CSharp.dll",
-        "build/MSBuildFull46/Microsoft.CodeAnalysis.dll",
-        "build/MSBuildFull46/Microsoft.Win32.Primitives.dll",
-        "build/MSBuildFull46/Nustache.Core.dll",
-        "build/MSBuildFull46/System.AppContext.dll",
-        "build/MSBuildFull46/System.Buffers.dll",
-        "build/MSBuildFull46/System.Collections.Concurrent.dll",
-        "build/MSBuildFull46/System.Collections.Immutable.dll",
-        "build/MSBuildFull46/System.Collections.NonGeneric.dll",
-        "build/MSBuildFull46/System.Collections.Specialized.dll",
-        "build/MSBuildFull46/System.Collections.dll",
-        "build/MSBuildFull46/System.ComponentModel.EventBasedAsync.dll",
-        "build/MSBuildFull46/System.ComponentModel.Primitives.dll",
-        "build/MSBuildFull46/System.ComponentModel.TypeConverter.dll",
-        "build/MSBuildFull46/System.ComponentModel.dll",
-        "build/MSBuildFull46/System.Console.dll",
-        "build/MSBuildFull46/System.Data.Common.dll",
-        "build/MSBuildFull46/System.Diagnostics.Contracts.dll",
-        "build/MSBuildFull46/System.Diagnostics.Debug.dll",
-        "build/MSBuildFull46/System.Diagnostics.FileVersionInfo.dll",
-        "build/MSBuildFull46/System.Diagnostics.Process.dll",
-        "build/MSBuildFull46/System.Diagnostics.StackTrace.dll",
-        "build/MSBuildFull46/System.Diagnostics.TextWriterTraceListener.dll",
-        "build/MSBuildFull46/System.Diagnostics.Tools.dll",
-        "build/MSBuildFull46/System.Diagnostics.TraceSource.dll",
-        "build/MSBuildFull46/System.Diagnostics.Tracing.dll",
-        "build/MSBuildFull46/System.Drawing.Primitives.dll",
-        "build/MSBuildFull46/System.Dynamic.Runtime.dll",
-        "build/MSBuildFull46/System.Globalization.Calendars.dll",
-        "build/MSBuildFull46/System.Globalization.Extensions.dll",
-        "build/MSBuildFull46/System.Globalization.dll",
-        "build/MSBuildFull46/System.IO.Compression.ZipFile.dll",
-        "build/MSBuildFull46/System.IO.Compression.dll",
-        "build/MSBuildFull46/System.IO.FileSystem.DriveInfo.dll",
-        "build/MSBuildFull46/System.IO.FileSystem.Primitives.dll",
-        "build/MSBuildFull46/System.IO.FileSystem.Watcher.dll",
-        "build/MSBuildFull46/System.IO.FileSystem.dll",
-        "build/MSBuildFull46/System.IO.IsolatedStorage.dll",
-        "build/MSBuildFull46/System.IO.MemoryMappedFiles.dll",
-        "build/MSBuildFull46/System.IO.Pipes.dll",
-        "build/MSBuildFull46/System.IO.UnmanagedMemoryStream.dll",
-        "build/MSBuildFull46/System.IO.dll",
-        "build/MSBuildFull46/System.Linq.Expressions.dll",
-        "build/MSBuildFull46/System.Linq.Parallel.dll",
-        "build/MSBuildFull46/System.Linq.Queryable.dll",
-        "build/MSBuildFull46/System.Linq.dll",
-        "build/MSBuildFull46/System.Memory.dll",
-        "build/MSBuildFull46/System.Net.Http.dll",
-        "build/MSBuildFull46/System.Net.NameResolution.dll",
-        "build/MSBuildFull46/System.Net.NetworkInformation.dll",
-        "build/MSBuildFull46/System.Net.Ping.dll",
-        "build/MSBuildFull46/System.Net.Primitives.dll",
-        "build/MSBuildFull46/System.Net.Requests.dll",
-        "build/MSBuildFull46/System.Net.Security.dll",
-        "build/MSBuildFull46/System.Net.Sockets.dll",
-        "build/MSBuildFull46/System.Net.WebHeaderCollection.dll",
-        "build/MSBuildFull46/System.Net.WebSockets.Client.dll",
-        "build/MSBuildFull46/System.Net.WebSockets.dll",
-        "build/MSBuildFull46/System.Numerics.Vectors.dll",
-        "build/MSBuildFull46/System.ObjectModel.dll",
-        "build/MSBuildFull46/System.Reflection.Extensions.dll",
-        "build/MSBuildFull46/System.Reflection.Metadata.dll",
-        "build/MSBuildFull46/System.Reflection.Primitives.dll",
-        "build/MSBuildFull46/System.Reflection.dll",
-        "build/MSBuildFull46/System.Resources.Reader.dll",
-        "build/MSBuildFull46/System.Resources.ResourceManager.dll",
-        "build/MSBuildFull46/System.Resources.Writer.dll",
-        "build/MSBuildFull46/System.Runtime.CompilerServices.Unsafe.dll",
-        "build/MSBuildFull46/System.Runtime.CompilerServices.VisualC.dll",
-        "build/MSBuildFull46/System.Runtime.Extensions.dll",
-        "build/MSBuildFull46/System.Runtime.Handles.dll",
-        "build/MSBuildFull46/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "build/MSBuildFull46/System.Runtime.InteropServices.dll",
-        "build/MSBuildFull46/System.Runtime.Numerics.dll",
-        "build/MSBuildFull46/System.Runtime.Serialization.Formatters.dll",
-        "build/MSBuildFull46/System.Runtime.Serialization.Json.dll",
-        "build/MSBuildFull46/System.Runtime.Serialization.Primitives.dll",
-        "build/MSBuildFull46/System.Runtime.Serialization.Xml.dll",
-        "build/MSBuildFull46/System.Runtime.dll",
-        "build/MSBuildFull46/System.Security.Claims.dll",
-        "build/MSBuildFull46/System.Security.Cryptography.Algorithms.dll",
-        "build/MSBuildFull46/System.Security.Cryptography.Csp.dll",
-        "build/MSBuildFull46/System.Security.Cryptography.Encoding.dll",
-        "build/MSBuildFull46/System.Security.Cryptography.Primitives.dll",
-        "build/MSBuildFull46/System.Security.Cryptography.X509Certificates.dll",
-        "build/MSBuildFull46/System.Security.Principal.dll",
-        "build/MSBuildFull46/System.Security.SecureString.dll",
-        "build/MSBuildFull46/System.Text.Encoding.CodePages.dll",
-        "build/MSBuildFull46/System.Text.Encoding.Extensions.dll",
-        "build/MSBuildFull46/System.Text.Encoding.dll",
-        "build/MSBuildFull46/System.Text.RegularExpressions.dll",
-        "build/MSBuildFull46/System.Threading.Overlapped.dll",
-        "build/MSBuildFull46/System.Threading.Tasks.Extensions.dll",
-        "build/MSBuildFull46/System.Threading.Tasks.Parallel.dll",
-        "build/MSBuildFull46/System.Threading.Tasks.dll",
-        "build/MSBuildFull46/System.Threading.Thread.dll",
-        "build/MSBuildFull46/System.Threading.ThreadPool.dll",
-        "build/MSBuildFull46/System.Threading.Timer.dll",
-        "build/MSBuildFull46/System.Threading.dll",
-        "build/MSBuildFull46/System.ValueTuple.dll",
-        "build/MSBuildFull46/System.Xml.ReaderWriter.dll",
-        "build/MSBuildFull46/System.Xml.XDocument.dll",
-        "build/MSBuildFull46/System.Xml.XPath.XDocument.dll",
-        "build/MSBuildFull46/System.Xml.XPath.dll",
-        "build/MSBuildFull46/System.Xml.XmlDocument.dll",
-        "build/MSBuildFull46/System.Xml.XmlSerializer.dll",
-        "build/MSBuildFull46/cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/cs/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/de/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/de/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/es/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/es/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/fr/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/it/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/it/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/ja/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/ko/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/netstandard.dll",
-        "build/MSBuildFull46/pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/pl/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/pt-BR/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/ru/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/tr/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
-        "build/MSBuildFull46/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "build/MSBuildFull46/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
-        "build/net461/refit.targets",
-        "build/netstandard2.0/refit.targets",
-        "buildTransitive/net461/refit.targets",
-        "buildTransitive/netstandard2.0/refit.targets",
-        "lib/net461/Refit.dll",
-        "lib/net461/Refit.xml",
-        "lib/netstandard2.0/Refit.dll",
-        "lib/netstandard2.0/Refit.xml",
-        "lib/netstandard2.1/Refit.dll",
-        "lib/netstandard2.1/Refit.xml",
-        "refit.5.2.1.nupkg.sha512",
-        "refit.nuspec",
-        "refit_logo.png"
+        "newtonsoft.json.12.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
       ]
     },
     "System.Private.ServiceModel/4.7.0": {
@@ -565,6 +428,31 @@
         "runtimes/win/lib/uap10.0.16299/System.Reflection.DispatchProxy.dll",
         "system.reflection.dispatchproxy.4.5.0.nupkg.sha512",
         "system.reflection.dispatchproxy.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -1022,24 +910,37 @@
         "system.servicemodel.security.nuspec"
       ]
     },
-    "System.Text.Json/4.7.2": {
-      "sha512": "TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+    "System.Text.Encoding.CodePages/4.5.1": {
+      "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
       "type": "package",
-      "path": "system.text.json/4.7.2",
+      "path": "system.text.encoding.codepages/4.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Text.Json.dll",
-        "lib/net461/System.Text.Json.xml",
-        "lib/netcoreapp3.0/System.Text.Json.dll",
-        "lib/netcoreapp3.0/System.Text.Json.xml",
-        "lib/netstandard2.0/System.Text.Json.dll",
-        "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.4.7.2.nupkg.sha512",
-        "system.text.json.nuspec",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "system.text.encoding.codepages.4.5.1.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -1052,8 +953,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Flurl >= 2.8.2",
+      "Flurl.Http >= 2.4.2",
       "IntegracaoCorreiosApi.Domain >= 1.0.0",
-      "Refit >= 5.2.1",
       "System.ServiceModel.Duplex >= 4.7.0",
       "System.ServiceModel.Http >= 4.7.0",
       "System.ServiceModel.NetTcp >= 4.7.0",
@@ -1106,9 +1008,13 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
-          "Refit": {
+          "Flurl": {
             "target": "Package",
-            "version": "[5.2.1, )"
+            "version": "[2.8.2, )"
+          },
+          "Flurl.Http": {
+            "target": "Package",
+            "version": "[2.4.2, )"
           },
           "System.ServiceModel.Duplex": {
             "target": "Package",

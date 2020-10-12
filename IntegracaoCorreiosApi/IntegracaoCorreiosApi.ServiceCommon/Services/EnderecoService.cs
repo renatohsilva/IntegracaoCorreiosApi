@@ -1,7 +1,7 @@
-﻿using IntegracaoCorreiosApi.Domain;
+﻿using Flurl.Http;
+using Flurl.Http.Configuration;
+using IntegracaoCorreiosApi.Domain;
 using IntegracaoCorreiosApi.ServiceCommon.Interfaces;
-using IntegracaoCorreiosApi.ServiceCommon.Refit;
-using Refit;
 using System;
 using System.Threading.Tasks;
 
@@ -9,12 +9,18 @@ namespace IntegracaoCorreiosApi.ServiceCommon.Services
 {
     public class EnderecoService : IEnderecoService
     {
+        private readonly IFlurlClient flurlClient;
+
+        public EnderecoService(IFlurlClientFactory flurlClientFactory)
+        {
+            flurlClient = flurlClientFactory.Get("https://viacep.com.br/ws");
+        }
+
         public async Task<EnderecoPessoa> BuscarEndereco(string cep)
         {
             try
             {
-                var cepClient = RestService.For<IEnderecoRefitService>("https://viacep.com.br");
-                var endereco = await cepClient.GetEndereco(cep);
+                var endereco = await flurlClient.Request(cep, "json").GetJsonAsync<EnderecoPessoa>();
                 return endereco;
             }
             catch (Exception ex)
